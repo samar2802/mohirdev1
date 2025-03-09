@@ -1,15 +1,25 @@
 public class Car {
-    String color;
-    String model;
-    int price;
-    boolean isMechanic;
-    Car(String color, String model, int price, boolean isMechanic){
+    private String color;
+    private String model;
+    private int price;
+    private boolean isMechanic;
+
+    public void setColor(String color) {
         this.color = color;
+    }
+
+    public void setModel(String model) {
         this.model = model;
+    }
+
+    public void setMechanic(boolean mechanic) {
+        isMechanic = mechanic;
+    }
+
+    public void setPrice(int price) {
         this.price = price;
-        this.isMechanic = isMechanic;
     }
     public void getInformation(){
-        System.out.println("Rangi:" + color + " Model:" + model + " Narxi:" + price + " Mexanikmi: " + (isMechanic ? "Ha" : "Yo'q"));
+        System.out.println("Rangi:" + this.color + " Model:" + this.model + " Narxi:" + this.price + " Mexanikmi: " + (this.isMechanic ? "Ha" : "Yo'q"));
     }
 }

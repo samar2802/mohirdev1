@@ -1,18 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        Car car1 = new Car("Black", "Toyota", 50000, true);
-        Car car2 = new Car("White", "BMW", 70000, true);
-        Car car3 = new Car("Red", "Chevrolet", 26500, false);
+        Car car1 = new Car();
+        car1.setColor("White");
+        car1.setMechanic(true);
+        car1.setModel("BMW");
+        car1.setPrice(50_000);
         car1.getInformation();
-        car2.getInformation();
-        car3.getInformation();
-        Triangle triangle1 = new Triangle(10.0, 20.0);
-        Person person = new Person();
-        person.name = "Samar";
-        person.setAge(19);
-        System.out.println(person.equals(triangle1));
-        System.out.println(car1.equals(car2));
-        System.out.println(triangle1.getClass());
-        System.out.println(car1.hashCode());
+        Triangle triangle = new Triangle();
+        triangle.setKatet1(20);
+        triangle.setKatet2(30);
+        System.out.println(triangle);
+        System.out.println(triangle.yuza(2, 3));
+        System.out.println(triangle.yuza(2f, 3f));
+        System.out.println(triangle.yuza(2L, 3L));
+        System.out.println(triangle.perimetr(2, 3));
+        System.out.println(triangle.perimetr(2f, 3f));
+        System.out.println(triangle.perimetr(2L, 3L));
+        Point person = new Point(1, 2, 3);
+        person.getInformation();
     }
 }
